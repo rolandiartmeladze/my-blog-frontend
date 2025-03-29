@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "format": "prettier --write 'src/**/*.{js,ts,vue}'",
+    "format:check": "prettier --check 'src/**/*.{js,ts,vue}'",
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
@@ -19,6 +21,7 @@
     "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
     "typescript": "~5.7.2",
     "vite": "^6.2.0",
     "vue-tsc": "^2.2.4"
