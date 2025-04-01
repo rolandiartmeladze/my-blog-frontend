@@ -1,31 +1,24 @@
-@import "tailwindcss";
+/* src/style.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Define your custom properties */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary: #1E293B;
+  --secondary: #64748B;
+  --accent: #E11D48;
+  --background: #F8FAFC;
+  --text: #1E293B;
+  --border: #CBD5E1;
+  --success: #22C55E;
+  --warning: #EAB308;
+  --error: #DC2626;
 }
 
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+/* Optional: You can also specify the default body styles here */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
 }
