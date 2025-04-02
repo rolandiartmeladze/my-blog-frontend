@@ -6,7 +6,9 @@ import Navigation from './Navigation.vue';
   <header
     class="w-full bg-secondary h-14 flex items-center justify-between px-6 py-10 shadow-md"
   >
-    <h1 class="text-lg font-semibold">RA Blog</h1>
+    <h1 class="text-lg font-semibold">
+      <RouterLink :to="'/'"> RA Blog </RouterLink>
+    </h1>
     <Navigation />
   </header>
 </template>
