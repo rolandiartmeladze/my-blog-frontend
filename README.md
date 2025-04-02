@@ -35,13 +35,15 @@ To get started with **my-blog-frontend**, follow these steps:
 ```sh
 git clone https://github.com/rolandiartmeladze/my-blog-frontend.git
 cd my-blog-frontend
+```
 
 ### 2️⃣ Install dependencies
 ```sh
 pnpm install
+```
 
 ### 3️⃣ Run the development server
 ```sh
 npm run dev
 
-
+```
