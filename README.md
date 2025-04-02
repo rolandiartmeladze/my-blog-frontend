@@ -12,20 +12,10 @@ A modern and responsive blog frontend built with **Vue.js** and **Vite**. This p
 - 🔹 **Reusable Components**: Well-structured component-based design.
 
 ## 📂 Project Structure
-my-blog-frontend/ 
-    │── src/ 
-        ├── assets/ # Static assets (icons, images, etc.) │ 
-        ├── components/ # Reusable Vue components (buttons, cards, etc.) │ 
-        ├── router/ # Vue Router configuration │ 
-        ├── views/ # Page views (Home, Posts, About, etc.) │ 
-        ├── data.ts # Static data or API handling logic │ 
-        ├── main.ts # Entry point of the app │ 
-        ├── App.vue # Root component 
-        │── public/ # Static files 
-        │── package.json # Dependencies and scripts 
-        │── tsconfig.json # TypeScript configuration 
-        │── tailwind.config.js # Tailwind CSS configuration 
-        │── vite.config.ts # Vite configuration
+
+![image](https://github.com/user-attachments/assets/5603da8d-0605-44d0-89f9-123e5a2b052e)
+
+
 
     
 ## 🚀 Installation & Setup
