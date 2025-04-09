@@ -7,7 +7,7 @@
       :placeholder="placeholder"
       v-model="modelValue"
       class="w-full border rounded px-3 py-2"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="$emit('update:modelValue', ($event.target as HTMLInputElement)?.value || '')"
     />
   </div>
 </template>
