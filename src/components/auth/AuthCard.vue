@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import LoginForm from './LoginForm.vue';
-import RegisterForm from "./RegisterForm.vue";
-import Button from "../ui/Button.vue";
+import RegisterForm from './RegisterForm.vue';
+import Button from '../ui/Button.vue';
 
 const isLogin = ref(true);
 const toggleForm = () => {

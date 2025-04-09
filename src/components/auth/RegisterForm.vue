@@ -7,10 +7,12 @@ import Button from '../ui/Button.vue';
     <h1 class="text-2xl font-bold">Register</h1>
 
     <input type="email" placeholder="Email" class="border px-3 py-2 rounded" />
-    <input type="password" placeholder="Password" class="border px-3 py-2 rounded" />
+    <input
+      type="password"
+      placeholder="Password"
+      class="border px-3 py-2 rounded"
+    />
 
-    <Button type="submit" variant="primary" class="w-full">
-      Register
-    </Button>
+    <Button type="submit" variant="primary" class="w-full"> Register </Button>
   </form>
 </template>

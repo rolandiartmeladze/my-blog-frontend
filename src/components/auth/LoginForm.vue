@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import Button from "../ui/Button.vue";
+import Button from '../ui/Button.vue';
 
 const form = ref({
   email: '',
@@ -30,7 +30,7 @@ const handleSubmit = async () => {
           'Content-Type': 'application/json',
         },
         withCredentials: true,
-      }
+      },
     );
 
     console.log('Login successful:', response.data);
