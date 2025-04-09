@@ -1,5 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Button from '../components/ui/Button.vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const JoinAs = () => {
+  router.push('/auth');
+};
+
+</script>
 
 <template>
-  <h1>home</h1>
+  <Button  type="submit" variant="primary" @click="JoinAs"  class="m-5">
+    Join As
+  </Button>
 </template>

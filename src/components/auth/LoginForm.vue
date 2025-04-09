@@ -24,19 +24,22 @@ const handleSubmit = async () => {
 
     const response = await axios.post(
       'http://localhost:8000/api/login',
-      form.value,
+      form,
       {
         headers: {
           'Content-Type': 'application/json',
         },
         withCredentials: true,
-      },
+      }
     );
 
     console.log('Login successful:', response.data);
+
     router.push('/posts');
   } catch (error: any) {
-    errorMessage.value = error.response?.data?.message || 'An error occurred.';
+    errorMessage.value =
+      error.response?.data?.message || 'An error occurred. Please try again.';
+    console.error('Authentication error:', error);
   } finally {
     isLoading.value = false;
   }
