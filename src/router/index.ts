@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import AuthView from '../views/AuthView.vue';
-import RegisterView from '../views/RegisterView.vue';
 import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue';
 import NewsView from '../views/NewsView.vue';
@@ -10,7 +9,6 @@ import ContactView from '../views/ContactView.vue';
 
 const routes = [
     { path: '/auth', name: 'auth', component: AuthView },
-    { path: '/register', name: 'register', component: RegisterView },
     { path: '/', name: 'home', component: HomeView },
     { path: '/about', name: 'about', component: AboutView },
     { path: '/news', name: 'news', component: NewsView },
