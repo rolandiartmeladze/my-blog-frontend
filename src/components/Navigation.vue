@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { NavItems } from '../data';
-import Button from './Button.vue';
+import Button from './ui/Button.vue';
 
 const menu = ref(NavItems);
 </script>
