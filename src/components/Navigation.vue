@@ -7,7 +7,7 @@ const menu = ref(NavItems);
 </script>
 
 <template>
-  <nav class="hidden lg:flex">
+  <nav class="fixed bg-accent h-12 p-3 bottom-0 left-0 w-full lg:relative">
     <RouterLink
       v-for="item in menu"
       :key="item.name"

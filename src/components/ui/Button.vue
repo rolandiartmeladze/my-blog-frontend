@@ -13,7 +13,7 @@ const buttonClasses = computed(() => {
     case 'secondary':
       return 'bg-secondary text-white hover:bg-secondary';
     case 'accent':
-      return 'bg-accent text-white hover:bg-secondary';
+      return 'bg-accent text-white hover:bg-primary';
     case 'outline':
       return 'border border-border text-text hover:bg-border';
     default:

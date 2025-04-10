@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Icons from './Icons';
 import Navigation from './Navigation.vue';
 </script>
 
@@ -9,6 +10,9 @@ import Navigation from './Navigation.vue';
     <h1 class="text-lg font-semibold">
       <RouterLink :to="'/'"> RA Blog </RouterLink>
     </h1>
+    <div>
+      <Icons name="menu" class="visible size-10 cursor-pointer hover:text-accent lg:hidden" />
+    </div>
     <Navigation />
   </header>
 </template>
