@@ -11,7 +11,6 @@ const icons = {
       { viewBox: '0 0 24 24', fill: 'currentColor', height: '1em', width: '1em', ...attrs },
       [h('path', { d: 'M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z' })]
     ),
-
   menuMotion: (attrs: any) =>
     h(
       'svg',
@@ -23,7 +22,6 @@ const icons = {
         }),
       ]
     ),
-
   github: (attrs: any) =>
     h(
       'svg',
@@ -41,7 +39,6 @@ const icons = {
         }),
       ]
     ),
-
   gmail: (attrs: any) =>
     h(
       'svg',
@@ -58,6 +55,88 @@ const icons = {
         }),
       ]
     ),
+  search: (attrs: any) =>
+    h(
+      'svg',
+      {
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "16",
+        height: "16",
+        fill: "currentColor",
+        class: "bi bi-search",
+        viewBox: "0 0 16 16",
+        ...attrs,
+      },
+      [
+        h('path', {
+          d: 'M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0',
+        }),
+      ],
+    ),
+  home: (attrs: any) =>
+    h('svg', {
+      xmlns: "http://www.w3.org/2000/svg",
+      width: "16",
+      height: "16",
+      fill: "currentColor",
+      class: "bi bi-house-door",
+      viewBox: "0 0 16 16",
+      ...attrs,
+    },
+      [
+        h('path', {
+          d: 'M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z',
+        }),
+
+      ]),
+  plus: (attrs: any) =>
+    h('svg', {
+      xmlns: "http://www.w3.org/2000/svg",
+      width: "16",
+      height: "16",
+      fill: "currentColor",
+      class: "bi bi-plus-circle",
+      viewBox: "0 0 16 16",
+      ...attrs,
+    },
+      [
+        h('path', {
+          d: 'M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16',
+        }),
+        h('path', {
+          d: 'M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4',
+        }),
+      ]),
+  notifi: (attrs: any) =>
+    h('svg', {
+      xmlns: "http://www.w3.org/2000/svg",
+      width: "16",
+      height: "16",
+      fill: "currentColor",
+      class: "bi bi-bell",
+      viewBox: "0 0 16 16",
+      ...attrs,
+    },
+      [
+        h('path', {
+          d: 'M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6',
+        }),
+      ]),
+  avatar: (attrs: any) =>
+    h('svg', {
+      xmlns: "http://www.w3.org/2000/svg",
+      width: "16",
+      height: "16",
+      fill: "currentColor",
+      class: "bi bi-person",
+      viewBox: "0 0 16 16",
+      ...attrs,
+    },
+      [
+        h('path', {
+          d: 'M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z',
+        }),
+      ]),
 };
 
 export default defineComponent({
