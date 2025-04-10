@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Icons from './Icons';
-import Navigation from './Navigation.vue';
+import PublicNavigation from './navigation/PublicNavigation.vue';
+import PrivateNavigation from './navigation/PrivateNavigation.vue';
 </script>
 
 <template>
@@ -13,7 +14,8 @@ import Navigation from './Navigation.vue';
     <div>
       <Icons name="menu" class="visible size-10 cursor-pointer hover:text-accent lg:hidden" />
     </div>
-    <Navigation />
+    <PublicNavigation />
+    <PrivateNavigation />
   </header>
 </template>
 
