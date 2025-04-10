@@ -3,6 +3,7 @@ import axios from 'axios';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import Button from '../ui/Button.vue';
+import SvgIcon from '../Icons.tsx';
 
 const form = ref({
   email: '',
@@ -76,8 +77,21 @@ const handleSubmit = async () => {
       />
     </div>
 
-    <Button type="submit" variant="primary" class="w-full">
+    <Button type="submit" class="w-full">
       {{ isLoading ? 'Logging in...' : 'Login' }}
     </Button>
+
+    <div>
+      <h1 class="font-bold ">
+        Login With: <samp class="text-xs text-accent ">comming soon..</samp>
+      </h1>
+      <div class="flex gap-4 mt-2 w-full justify-center">
+      <SvgIcon name="gmail" class="size-10 cursor-pointer hover:text-accent" />
+      <SvgIcon name="github" class="size-10 cursor-pointer hover:text-accent" />
+      </div>
+      </div>
+      
+
+
   </form>
 </template>
