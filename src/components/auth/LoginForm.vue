@@ -48,8 +48,11 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <form @submit.prevent="handleSubmit" class="flex flex-col gap-4">
-    <h1 class="text-2xl font-bold">Log In</h1>
+  <form @submit.prevent="handleSubmit" class="flex flex-col gap-6">
+    <div class="text-center mb-4">
+      <h1 class="text-3xl text-left font-bold">Welcome Back!</h1>
+      <p class="text-sm text-primery text-left">Log in to access your account</p>
+    </div>
 
     <p v-if="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</p>
 
@@ -75,6 +78,23 @@ const handleSubmit = async () => {
         required
         class="border px-3 py-2 rounded"
       />
+    </div>
+
+    <div class="flex gap-3 flex-col lg:flex-row justify-between pr-6" >
+      <div class="flex justify-center items-center gap-2 mt-2">
+
+      
+    <input 
+      type="checkbox" 
+      id="remember" 
+      class="mr-2 border-primary checked:bg-primary checked:border-primary focus:ring-primary" 
+    />
+    <label for="remember" class="text-sm">Remember me</label>
+</div>
+    <div class="flex justify-between mt-2 lg:flex-col lg:gap-2 lg:text-center">
+      <a href="#" class="text-sm text-accent hover:underline">Forgot password?</a>
+      <a href="#" class="text-sm text-accent hover:underline">Create an account</a>
+      </div>
     </div>
 
     <Button type="submit" class="w-full">

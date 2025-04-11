@@ -15,16 +15,11 @@ const toggleForm = () => {
   <Button
     @click="toggleForm"
     variant="accent"
-    class="absolute -top-5 right-4 px-4 py-2 text-lg font-semibold shadow-md rounded-md hover:brightness-110 transition duration-200"
+    class="absolute -top-5 right-6 px-4 py-2 text-lg font-semibold shadow-md rounded-md hover:brightness-110 transition duration-200"
   >
     {{ isLogin ? 'Register' : 'Login' }}
   </Button>
 
-  <h3 class="text-2xl font-bold text-left pl-3 mb-6 mt-2">
-  {{ isLogin
-    ? 'Welcome back!'
-    : 'Join As Now!' }}
-</h3>
 
   <component :is="isLogin ? LoginForm : RegisterForm" />
 </div>

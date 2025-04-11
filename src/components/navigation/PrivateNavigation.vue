@@ -7,7 +7,7 @@ const menu = ref(PrivateNavItems);
 </script>
 
 <template>
-    <nav class="fixed bg-secondary flex justify-evenly py-3 bottom-0 left-0 w-full lg:w-auto lg:hidden lg:max-w-20">
+    <nav class="fixed bg-secondary flex justify-evenly py-3 bottom-0 left-0 w-full lg:w-auto lg:hidden lg:max-w-20 z-10">
         <RouterLink v-for="item in menu" :key="item.name" :to="item.link" :class="{
             'border-b border-b-accent': true,
             'p-3 size-15 rounded-full border-none -mt-6 bg-primary': item.icon === 'plus',
