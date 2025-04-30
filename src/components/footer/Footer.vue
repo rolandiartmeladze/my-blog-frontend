@@ -3,7 +3,7 @@ import Icons from '../Icons';
 </script>
 
 <template>
-  <footer class="w-full absolute bottom-13 bg-secondary h-16 flex items-center justify-between px-6 py-4 shadow-lg mt-3 lg:fixed lg:bottom-0">
+  <footer class="w-full bg-secondary h-16 flex items-center justify-between px-6 py-4 shadow-lg mt-3">
     <h1 class="text-lg font-semibold text-white hover:text-yellow-300 transition duration-300">
       © Roland Artmeladze
     </h1>
