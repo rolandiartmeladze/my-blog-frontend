@@ -19,12 +19,12 @@ const handleSubmit = async () => {
   isLoading.value = true;
 
   try {
-    await axios.get('http://localhost:8000/sanctum/csrf-cookie', {
+    await axios.get('https://my-blog-backend-production-197d.up.railway.app/sanctum/csrf-cookie', {
       withCredentials: true,
     });
 
     const response = await axios.post(
-      'http://localhost:8000/api/login',
+      'https://my-blog-backend-production-197d.up.railway.app/api/login',
       form.value,
       {
         headers: {
