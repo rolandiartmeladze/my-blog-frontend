@@ -10,7 +10,7 @@ const JoinAs = () => {
 </script>
 
 <template>
-  <Button  type="submit" variant="primary" @click="JoinAs"  class="m-5">
+  <Button  type="submit" variant='accent' @click="JoinAs"  class="m-5">
     Join As
   </Button>
 </template>

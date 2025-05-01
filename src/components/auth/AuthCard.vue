@@ -11,7 +11,7 @@ const toggleForm = () => {
 </script>
 
 <template>
-<div class="max-w-md mx-auto mt-6 lg:mt-10 relative p-6 lg:shadow-lg lg:rounded-lg lg:bg-secondary bg-white">
+<div class="max-w-md mx-auto mt-10 lg:mt-10 relative p-6 lg:shadow-lg lg:rounded-lg lg:bg-secondary bg-secondary shadow-sm rounded-md">
   <Button
     @click="toggleForm"
     variant="accent"
