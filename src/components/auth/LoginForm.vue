@@ -4,6 +4,7 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import Button from '../ui/Button.vue';
 import SvgIcon from '../Icons.tsx';
+import Input from '../ui/Input.vue';
 
 const form = ref({
   email: '',
@@ -36,7 +37,7 @@ const handleSubmit = async () => {
 
     console.log('Login successful:', response.data);
 
-    router.push('/posts');
+    router.push('/');
   } catch (error: any) {
     errorMessage.value =
       error.response?.data?.message || 'An error occurred. Please try again.';
@@ -56,30 +57,18 @@ const handleSubmit = async () => {
 
     <p v-if="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</p>
 
-    <div class="flex flex-col gap-1">
-      <label for="email">Email</label>
-      <input v-model="form.email" type="email" id="email" placeholder="Enter your email" required
-        class="border px-3 py-2 rounded" />
-    </div>
-
-    <div class="flex flex-col gap-1">
-      <label for="password">Password</label>
-      <input v-model="form.password" type="password" id="password" placeholder="Enter your password" required
-        class="border px-3 py-2 rounded" />
-    </div>
-
-    <div class="flex gap-3 flex-col lg:flex-row justify-between pr-6">
-      <div class="flex justify-center items-center gap-2 mt-2">
-
-
+    <div class="flex flex-col gap-5">
+      <Input id="email" label="Email" type="email" placeholder="Enter your email" v-model="form.email" />
+      <Input id="password" label="Password" type="password" placeholder="Enter your password" v-model="form.password" />
+      <div class="flex items-center justify-center gap-2"> 
         <input type="checkbox" id="remember"
           class="mr-2 border-primary checked:bg-primary checked:border-primary focus:ring-primary" />
         <label for="remember" class="text-sm">Remember me</label>
       </div>
-      <div class="flex justify-between mt-2 lg:flex-col lg:gap-2 lg:text-center">
-        <a href="#" class="text-sm text-accent hover:underline">Forgot password?</a>
-        <a href="#" class="text-sm text-accent hover:underline">Create an account</a>
-      </div>
+    </div>
+    <div class="flex justify-between mt-2 lg:flex-col lg:gap-2 lg:text-center">
+      <a href="#" class="text-sm text-accent hover:underline">Forgot password?</a>
+      <a href="#" class="text-sm text-accent hover:underline">Create an account</a>
     </div>
 
     <Button type="submit" class="w-full">
@@ -91,12 +80,9 @@ const handleSubmit = async () => {
         Login With: <samp class="text-xs text-accent ">comming soon..</samp>
       </h1>
       <div class="flex gap-4 mt-2 w-full justify-center">
-        <SvgIcon name="gmail" class="size-10 cursor-pointer hover:text-accent" />
-        <SvgIcon name="github" class="size-10 cursor-pointer hover:text-accent" />
+        <SvgIcon name="gmail" class="size-10 cursor-pointer" />
+        <SvgIcon name="github" class="size-10 cursor-pointer" />
       </div>
     </div>
-
-
-
   </form>
 </template>
