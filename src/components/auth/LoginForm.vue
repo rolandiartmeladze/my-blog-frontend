@@ -66,7 +66,7 @@ const handleSubmit = async () => {
         <label for="remember" class="text-sm">Remember me</label>
       </div>
     </div>
-    <div class="flex justify-between mt-2 lg:flex-col lg:gap-2 lg:text-center">
+    <div class="flex justify-between mt-2 lg:gap-2 lg:text-center">
       <a href="#" class="text-sm text-accent hover:underline">Forgot password?</a>
       <a href="#" class="text-sm text-accent hover:underline">Create an account</a>
     </div>
