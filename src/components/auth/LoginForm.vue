@@ -5,8 +5,7 @@ import { useRouter } from 'vue-router';
 import Button from '../ui/Button.vue';
 import SvgIcon from '../Icons.tsx';
 import Input from '../ui/Input.vue';
-
-import { fetchUser } from '../../services/fetchUser.ts';
+import { useAuth } from '../../auth';
 
 const form = ref({
   email: '',
@@ -41,12 +40,9 @@ const handleSubmit = async () => {
     const token = response.data.token;
     sessionStorage.setItem('authToken', token);
 
-    console.log('Login successful:', token);
-
-    await fetchUser();
-    console.log('Login successful:', response.data);
-
-    router.push('./dashboard');
+    const { isAuthenticated } = useAuth();
+    isAuthenticated.value = true;    
+    router.push('/dashboard');
 
   } catch (error: any) {
     errorMessage.value =
