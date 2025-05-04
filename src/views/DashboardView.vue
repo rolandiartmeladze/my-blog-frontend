@@ -2,7 +2,13 @@
 import { ref, onMounted } from 'vue';
 import { fetchUser } from '../services/fetchUser.ts';
 
-const users = ref([]); // ინიციალიზაცია ცარიელი მასივით
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const users = ref<User[]>([]); 
 const errorMessage = ref<string | null>(null);
 
 onMounted(async () => {
