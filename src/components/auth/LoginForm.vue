@@ -6,6 +6,8 @@ import Button from '../ui/Button.vue';
 import SvgIcon from '../Icons.tsx';
 import Input from '../ui/Input.vue';
 
+import { fetchUser } from '../../services/fetchUser.ts';
+
 const form = ref({
   email: '',
   password: '',
@@ -33,11 +35,19 @@ const handleSubmit = async () => {
         },
         withCredentials: true,
       }
+
     );
 
+    const token = response.data.token;
+    sessionStorage.setItem('authToken', token);
+
+    console.log('Login successful:', token);
+
+    await fetchUser();
     console.log('Login successful:', response.data);
 
-    router.push('/');
+    router.push('./dashboard');
+
   } catch (error: any) {
     errorMessage.value =
       error.response?.data?.message || 'An error occurred. Please try again.';
