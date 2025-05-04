@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const user = ref(null);
 const isAuthenticated = ref(false);
-const token = localStorage.getItem('authToken');
+const token = sessionStorage.getItem('authToken');
 
 if (token) {
   axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
@@ -19,7 +19,7 @@ if (token) {
 }
 
 function logout() {
-  localStorage.removeItem('authToken');
+  sessionStorage.removeItem('authToken');
   delete axios.defaults.headers.common['Authorization'];
   user.value = null;
   isAuthenticated.value = false;
