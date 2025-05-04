@@ -42,7 +42,7 @@ const handleSubmit = async () => {
 
     const { isAuthenticated } = useAuth();
     isAuthenticated.value = true;    
-    router.push('/dashboard');
+    router.push('/');
 
   } catch (error: any) {
     errorMessage.value =
